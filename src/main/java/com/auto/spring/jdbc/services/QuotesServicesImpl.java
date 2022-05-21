@@ -17,10 +17,13 @@ import java.util.List;
 @Service
 public class QuotesServicesImpl implements QuotesServices {
 
-    @Autowired
+
+
     QuoteRepository quoteRepository;
 
-    
+    public QuotesServicesImpl(QuoteRepository quoteRepository) {
+        this.quoteRepository=quoteRepository;
+    }
     
 
     @Override
